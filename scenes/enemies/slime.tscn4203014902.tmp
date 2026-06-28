@@ -95,7 +95,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uhx0m")
 }],
-"loop": 0,
+"loop": true,
 "name": &"death",
 "speed": 5.0
 }, {
@@ -115,7 +115,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wfyvu")
 }],
-"loop": 1,
+"loop": true,
 "name": &"default",
 "speed": 10.0
 }, {
@@ -135,33 +135,28 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rdhaw")
 }],
-"loop": 1,
+"loop": true,
 "name": &"jump",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahq63"]
-size = Vector2(20, 17.25)
+size = Vector2(28, 19.25)
 
 [node name="Slime" type="CharacterBody2D" unique_id=922154029]
 collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_ahq63")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=947367094]
-position = Vector2(7.450581e-09, -1.1920929e-07)
-scale = Vector2(1.4453125, 1.3161767)
+position = Vector2(1.9073486e-06, 4.7683716e-07)
+scale = Vector2(1.53125, 1.617647)
 sprite_frames = SubResource("SpriteFrames_e12yk")
-
-[node name="WallDetector" type="RayCast2D" parent="AnimatedSprite2D" unique_id=552385744]
-position = Vector2(-1.2456155e-06, -2.947721e-07)
-scale = Vector2(0.6530613, 0.6181819)
-target_position = Vector2(35, 0)
-
-[node name="FloorDetector" type="RayCast2D" parent="AnimatedSprite2D" unique_id=158925798]
-position = Vector2(22.857143, -2.947721e-07)
-scale = Vector2(0.6530613, 0.6181819)
-target_position = Vector2(0, 25)
+frame_progress = 0.31302196
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1479419742]
-position = Vector2(0, 1.375)
+position = Vector2(-1, 2.375)
 shape = SubResource("RectangleShape2D_ahq63")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=552385744]
+target_position = Vector2(20, 0)

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cm5u8c5ahfupp" path="res://scenes/enemies/archer.gd" id="1_vlcfm"]
 [ext_resource type="Texture2D" uid="uid://bbacgxa0amgnc" path="res://assets/enemies/archer/spritesheet.png" id="1_wofq1"]
 [ext_resource type="PackedScene" uid="uid://duamn18qyi83x" path="res://scenes/enemies/arrow.tscn" id="3_06gkh"]
+[ext_resource type="PackedScene" uid="uid://brh5rfpyxjh78" path="res://common/health.tscn" id="4_wi0iy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vlcfm"]
 atlas = ExtResource("1_wofq1")
@@ -96,6 +97,14 @@ region = Rect2(384, 0, 64, 64)
 atlas = ExtResource("1_wofq1")
 region = Rect2(448, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_06nrr"]
+atlas = ExtResource("1_wofq1")
+region = Rect2(0, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuupu"]
+atlas = ExtResource("1_wofq1")
+region = Rect2(64, 448, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wr8x"]
 atlas = ExtResource("1_wofq1")
 region = Rect2(0, 320, 64, 64)
@@ -136,7 +145,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6wka2")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"attack",
 "speed": 5.0
 }, {
@@ -200,6 +209,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_06nrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuupu")
+}],
+"loop": 0,
+"name": &"hurt",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8wr8x")
 }, {
 "duration": 1.0,
@@ -217,7 +237,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vlcfm"]
-size = Vector2(261, 44)
+size = Vector2(269, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wofq1"]
 size = Vector2(40, 42)
@@ -253,7 +273,7 @@ scale = Vector2(0.8258065, 0.8476821)
 target_position = Vector2(45, 0)
 
 [node name="FloorDetector" type="RayCast2D" parent="AnimatedSprite2D" unique_id=95819846]
-position = Vector2(42.322586, -0.63575834)
+position = Vector2(35, -0.636)
 scale = Vector2(0.8258065, 0.8476821)
 target_position = Vector2(0, 25)
 
@@ -263,7 +283,7 @@ scale = Vector2(0.8258065, 0.8476821)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/DetectionArea" unique_id=471918915]
-position = Vector2(145.5, -1)
+position = Vector2(134, -12)
 shape = SubResource("RectangleShape2D_vlcfm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1217017518]
@@ -271,7 +291,11 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_wofq1")
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=1586352763]
+process_callback = 0
 one_shot = true
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=382704162]
 replication_config = SubResource("SceneReplicationConfig_vlcfm")
+
+[node name="Health" parent="." unique_id=1838589111 instance=ExtResource("4_wi0iy")]
+max_health = 3

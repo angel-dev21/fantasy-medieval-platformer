@@ -57,6 +57,7 @@ layout_mode = 2
 [node name="IPInput" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=34664374]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "127.0.0.1"
 placeholder_text = "Enter IP"
 expand_to_text_length = true
 

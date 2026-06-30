@@ -1,13 +1,13 @@
 extends Node
 
-signal connected_to_game
-signal connection_failed
-signal player_disconnected(id)
-
 const PORT = 42069
 const MAX_PLAYERS = 2
 
 var mode: String = "solo"
+
+signal connected_to_game
+signal connection_failed
+signal player_disconnected(id)
 
 func start_server() -> void:
 	var peer = ENetMultiplayerPeer.new()

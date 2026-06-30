@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://ww4aypi552f" path="res://assets/player/_JumpFallInbetween.png" id="3_75vfm"]
 [ext_resource type="Texture2D" uid="uid://cikqh23yjoi1o" path="res://assets/player/_Jump.png" id="3_lvxji"]
 [ext_resource type="Texture2D" uid="uid://b32lcrgberybq" path="res://assets/player/_Run.png" id="4_p47bc"]
-[ext_resource type="Texture2D" uid="uid://bqa68fnmitf3s" path="res://assets/player/_Hit.png" id="5_5gtgg"]
 [ext_resource type="PackedScene" uid="uid://brh5rfpyxjh78" path="res://common/health.tscn" id="8_qek5x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
@@ -79,10 +78,6 @@ region = Rect2(0, 0, 120, 80)
 [sub_resource type="AtlasTexture" id="AtlasTexture_tffgl"]
 atlas = ExtResource("3_75vfm")
 region = Rect2(120, 0, 120, 80)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_genst"]
-atlas = ExtResource("5_5gtgg")
-region = Rect2(0, 0, 120, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gmlin"]
 atlas = ExtResource("1_8afob")
@@ -243,14 +238,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_genst")
-}],
-"loop": 0,
-"name": &"hurt",
-"speed": 4.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_gmlin")
 }, {
 "duration": 1.0,
@@ -294,9 +281,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fcs02")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"jump",
-"speed": 10.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -371,7 +358,8 @@ shape = SubResource("RectangleShape2D_p47bc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1953432724]
 position = Vector2(5, -30)
 sprite_frames = SubResource("SpriteFrames_gx1jg")
-animation = &"hurt"
+animation = &"fall"
+frame = 1
 frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=448880490]
@@ -383,4 +371,3 @@ zoom = Vector2(2, 2)
 replication_config = SubResource("SceneReplicationConfig_75vfm")
 
 [node name="Health" parent="." unique_id=1838589111 instance=ExtResource("8_qek5x")]
-max_health = 10

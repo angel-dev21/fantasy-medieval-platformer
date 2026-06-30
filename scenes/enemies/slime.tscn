@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://qvej2rkuya8m" path="res://scenes/enemies/slime.gd" id="1_ahq63"]
 [ext_resource type="Texture2D" uid="uid://c1dsgxhfkdsbh" path="res://assets/enemies/Slime.png" id="1_rldp6"]
+[ext_resource type="PackedScene" uid="uid://brh5rfpyxjh78" path="res://common/health.tscn" id="3_4h4y0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ahq63"]
 atlas = ExtResource("1_rldp6")
@@ -140,8 +141,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4h4y0"]
+size = Vector2(167, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ahq63"]
 size = Vector2(20, 17.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
+size = Vector2(24, 18)
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ahq63"]
 properties/0/path = NodePath(".:position")
@@ -176,9 +183,32 @@ position = Vector2(22.857143, -2.947721e-07)
 scale = Vector2(0.6530613, 0.6181819)
 target_position = Vector2(0, 25)
 
+[node name="DetectionArea" type="Area2D" parent="AnimatedSprite2D" unique_id=441263821]
+position = Vector2(-5.1549964e-09, 9.0572414e-08)
+scale = Vector2(0.6918919, 0.7597765)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/DetectionArea" unique_id=106209329]
+position = Vector2(83.5, -1)
+shape = SubResource("RectangleShape2D_4h4y0")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1479419742]
 position = Vector2(0, 1.375)
 shape = SubResource("RectangleShape2D_ahq63")
 
+[node name="DamageArea" type="Area2D" parent="." unique_id=264210161]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=833886991]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_u0ya7")
+
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1194016507]
 replication_config = SubResource("SceneReplicationConfig_ahq63")
+
+[node name="Health" parent="." unique_id=1838589111 instance=ExtResource("3_4h4y0")]
+max_health = 1
+
+[node name="DamageTimer" type="Timer" parent="." unique_id=496684348]
+process_callback = 0

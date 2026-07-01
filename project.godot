@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Network="*uid://6725u61ocj64"
+GameState="*uid://iexnll0w4q3n"
 
 [input]
 
@@ -49,9 +50,14 @@ attack={
 
 [layer_names]
 
+2d_physics/layer_1="world"
 3d_physics/layer_1="World"
+2d_physics/layer_2="player"
 3d_physics/layer_2="Player"
+2d_physics/layer_3="enemy"
 3d_physics/layer_3="Enemies"
+2d_physics/layer_4="items"
+2d_physics/layer_5="misc"
 
 [physics]
 

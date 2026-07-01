@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy4n5s4xs4grt"
-path="res://.godot/imported/pixelquest16-july-2025-cave.png-d13b8d5e18b6a200efcc1d512844217b.ctex"
+uid="uid://gu1k2rhwdfvi"
+path="res://.godot/imported/fa12.png-16a5523ac2ce0cfa9ae13b3f0ec0a6d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/pixelquest16-july-2025-cave.png"
-dest_files=["res://.godot/imported/pixelquest16-july-2025-cave.png-d13b8d5e18b6a200efcc1d512844217b.ctex"]
+source_file="res://assets/items/fa12.png"
+dest_files=["res://.godot/imported/fa12.png-16a5523ac2ce0cfa9ae13b3f0ec0a6d1.ctex"]
 
 [params]
 

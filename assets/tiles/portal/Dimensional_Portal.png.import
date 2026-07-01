@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wt7qskokhwa2"
-path="res://.godot/imported/pixelquest16-aug-2025-tavern.png-15c6a920d0701221b1ac82256565c33c.ctex"
+uid="uid://cra2apvxfagbu"
+path="res://.godot/imported/Dimensional_Portal.png-6cda110ca1083d6524536bb4fce917c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/pixelquest16-aug-2025-tavern.png"
-dest_files=["res://.godot/imported/pixelquest16-aug-2025-tavern.png-15c6a920d0701221b1ac82256565c33c.ctex"]
+source_file="res://assets/tiles/portal/Dimensional_Portal.png"
+dest_files=["res://.godot/imported/Dimensional_Portal.png-6cda110ca1083d6524536bb4fce917c4.ctex"]
 
 [params]
 

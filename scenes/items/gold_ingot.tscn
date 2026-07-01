@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c8j1hlrqtklcu"]
+
+[ext_resource type="Script" uid="uid://bjpgth6u8nhjh" path="res://scenes/items/gold_ingot.gd" id="1_ddsp0"]
+[ext_resource type="Texture2D" uid="uid://dyrbp8aa873gl" path="res://assets/items/gold.png" id="1_uykiq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtglo"]
+
+[node name="GoldIngot" type="Area2D" unique_id=190345084]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_ddsp0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=324986925]
+position = Vector2(4.7683716e-07, 4.7683716e-07)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_uykiq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=397578573]
+shape = SubResource("RectangleShape2D_dtglo")

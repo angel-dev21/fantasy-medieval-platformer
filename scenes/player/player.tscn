@@ -377,10 +377,8 @@ frame_progress = 1.0
 [node name="Camera2D" type="Camera2D" parent="." unique_id=448880490]
 zoom = Vector2(2, 2)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1686617488]
-
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=600813118]
 replication_config = SubResource("SceneReplicationConfig_75vfm")
 
 [node name="Health" parent="." unique_id=1838589111 instance=ExtResource("8_qek5x")]
-max_health = 10
+max_health = 1

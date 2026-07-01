@@ -17,10 +17,12 @@ func _ready() -> void:
 
 func _on_solo_pressed() -> void:
 	Network.mode = "solo"
+	GameState.reset()
 	_load_game()
 
 func _on_host_pressed() -> void:
 	status_label.text = "Waiting for player..."
+	GameState.reset()
 	Network.start_server()
 
 func _on_join_pressed() -> void:

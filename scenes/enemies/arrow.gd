@@ -14,6 +14,7 @@ func set_direction(dir: float) -> void:
 	move_direction = dir
 	$Sprite2D.scale.x = dir
 
+#xd
 func _physics_process(delta: float) -> void:
 	if Network.mode == "multi" and not multiplayer.is_server():
 		return

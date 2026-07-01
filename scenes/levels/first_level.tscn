@@ -1,10 +1,14 @@
 [gd_scene format=4 uid="uid://0gapep21q75m"]
 
 [ext_resource type="Texture2D" uid="uid://bk6lyxxu3panr" path="res://assets/tiles/forest/Assets.png" id="1_1bbdw"]
-[ext_resource type="PackedScene" uid="uid://da4qai8fjhnb" path="res://scenes/levels/base_level.tscn" id="1_xbibw"]
+[ext_resource type="PackedScene" uid="uid://da4qai8fjhnb" path="res://common/base_level.tscn" id="1_xbibw"]
 [ext_resource type="PackedScene" uid="uid://d4ehek4daktpm" path="res://scenes/levels/forest_background.tscn" id="3_r7qys"]
 [ext_resource type="PackedScene" uid="uid://cbp3avyigtoie" path="res://scenes/enemies/slime.tscn" id="4_hkalp"]
 [ext_resource type="PackedScene" uid="uid://fe6wb84bbkj0" path="res://scenes/enemies/archer.tscn" id="5_xbibw"]
+[ext_resource type="PackedScene" uid="uid://df160mhwghbbp" path="res://scenes/items/health_potion.tscn" id="6_qhf3p"]
+[ext_resource type="PackedScene" uid="uid://c2isciipjah0v" path="res://scenes/items/star_item.tscn" id="7_3kh8m"]
+[ext_resource type="PackedScene" uid="uid://c8j1hlrqtklcu" path="res://scenes/items/gold_ingot.tscn" id="8_fqprn"]
+[ext_resource type="PackedScene" uid="uid://j7qilpjedpju" path="res://scenes/levels/portal.tscn" id="9_4ooow"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbibw"]
 texture = ExtResource("1_1bbdw")
@@ -370,7 +374,56 @@ visible = false
 position = Vector2(401, 406)
 
 [node name="Slime" parent="." index="8" unique_id=210080249 instance=ExtResource("4_hkalp")]
-position = Vector2(387, 336)
+position = Vector2(682, 334)
 
 [node name="Archer" parent="." index="9" unique_id=1654675693 instance=ExtResource("5_xbibw")]
-position = Vector2(243, 318)
+position = Vector2(501, 328)
+
+[node name="HealthPotion" parent="." index="10" unique_id=574479801 instance=ExtResource("6_qhf3p")]
+position = Vector2(-374, 339)
+
+[node name="HealthPotion2" parent="." index="11" unique_id=1978179979 instance=ExtResource("6_qhf3p")]
+position = Vector2(-327, 339)
+
+[node name="HealthPotion3" parent="." index="12" unique_id=713096361 instance=ExtResource("6_qhf3p")]
+position = Vector2(-243, 340)
+
+[node name="StarItem" parent="." index="13" unique_id=838478676 instance=ExtResource("7_3kh8m")]
+position = Vector2(-285, 339)
+
+[node name="StarItem2" parent="." index="14" unique_id=1509320779 instance=ExtResource("7_3kh8m")]
+position = Vector2(-373, 290)
+
+[node name="GoldIngot" parent="." index="15" unique_id=190345084 instance=ExtResource("8_fqprn")]
+position = Vector2(-161, 291)
+
+[node name="GoldIngot2" parent="." index="16" unique_id=91519413 instance=ExtResource("8_fqprn")]
+position = Vector2(-99, 323)
+
+[node name="GoldIngot3" parent="." index="17" unique_id=957406486 instance=ExtResource("8_fqprn")]
+position = Vector2(-110, 283)
+
+[node name="GoldIngot4" parent="." index="18" unique_id=361387105 instance=ExtResource("8_fqprn")]
+position = Vector2(-148, 327)
+
+[node name="GoldIngot5" parent="." index="19" unique_id=1407539145 instance=ExtResource("8_fqprn")]
+position = Vector2(-203, 304)
+
+[node name="GoldIngot6" parent="." index="20" unique_id=50773017 instance=ExtResource("8_fqprn")]
+position = Vector2(-234, 267)
+
+[node name="GoldIngot7" parent="." index="21" unique_id=1305115823 instance=ExtResource("8_fqprn")]
+position = Vector2(-263, 283)
+
+[node name="GoldIngot8" parent="." index="22" unique_id=1740345311 instance=ExtResource("8_fqprn")]
+position = Vector2(-241, 311)
+
+[node name="GoldIngot9" parent="." index="23" unique_id=1845749878 instance=ExtResource("8_fqprn")]
+position = Vector2(-294, 300)
+
+[node name="GoldIngot10" parent="." index="24" unique_id=445276074 instance=ExtResource("8_fqprn")]
+position = Vector2(-299, 270)
+
+[node name="Portal" parent="." index="25" unique_id=762838109 instance=ExtResource("9_4ooow")]
+position = Vector2(-446, 339)
+next_level_path = "res://scenes/levels/second_level.tscn"
